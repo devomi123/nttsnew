@@ -1,0 +1,27 @@
+
+
+.bg{
+  background-color: darkgrey;
+}
+.container{
+  margin-top: 100px;
+}
+.inputs{
+  margin-left: 100px;
+  color:black ;
+  box-shadow: 24dp;
+  /* height: 300px; */
+}
+
+@media(max-width:990px){
+  .inputs{
+    /* margin-right:auto ; */
+    width: 100%;
+
+  }
+  .mat-card {
+    width: 100%;
+
+  }
+}
+

@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-sm ">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a routerLink="/about" mat-button> ABOUT US</a>
+      </li>
+    </ul>
+    <div class="nav-item me-5">
+      <button class="btn btn-danger" (click)="logout()">LOGOUT</button>
+    </div>
+  </div>
+</nav>
+<div class="container w-50 mt-5">
+  <mat-card class="bg-light text-light sign">
+    <mat-card-content>
+      <form class="mt-5" [formGroup]="form">
+        <p>
+          <mat-form-field class="w-50 inputs text-dark">
+            <input type="number" matInput placeholder="Enter mobileNumber" formControlName="mobileNumber">
+            <div *ngIf="f['mobileNumber'].touched && f['mobileNumber'].invalid" class="alert alert-danger">Enter Valid
+              Mobile Number</div>
+            <!-- <div *ngIf="f['mobileNumber'].errors['pattern']">Enter Valid Mobile Number</div> -->
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field class="w-50 inputs text-dark">
+            <input type="text" matInput placeholder="Enter Text" formControlName="newtext" matTooltip="Info about the action">
+            <!-- <div *ngIf="f['text'].touched && f['text'].invalid" class="alert alert-danger">Enter Valid
+              Mobile Number</div> -->
+            <!-- <div *ngIf="f['mobileNumber'].errors['pattern']">Enter Valid Mobile Number</div> -->
+          </mat-form-field>
+        </p>
+
+        <div class="button">
+          <button class="btn btn-primary" type="submit" [disabled]="!form.valid" (click)="submit()">Submit</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

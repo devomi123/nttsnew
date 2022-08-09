@@ -1,0 +1,31 @@
+<div class="container w-50 h-50  ">
+  <mat-card class="bg-warning text-light sign">
+    <mat-card-title class="text-center text-dark mt-3"
+      style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 30px;">Login Here !
+    </mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="form" class="mt-5">
+        <p>
+          <mat-form-field class="ms-5 inputs">
+            <input type="text" matInput placeholder="Email" formControlName="email">
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field class="ms-5 inputs">
+            <input type="password" matInput placeholder="Password" formControlName="password">
+          </mat-form-field>
+        </p>
+        <div class="button">
+          <!-- <button type="submit" mat-button>Login</button> -->
+          <button mat-raised-button color="accent" [disabled]="!form.valid" class="ms-5 mt-3"
+            (click)="login(form.value)">Login</button>
+          <!-- <button mat-raised-button color="accent"  routerLink="sign" class="ms-5">SignUp</button> -->
+
+        </div>
+
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+</div>
